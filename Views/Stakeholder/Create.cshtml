@@ -1,0 +1,58 @@
+﻿@model SoftwareII.Models.Stakeholder
+
+@{
+    ViewData["Title"] = "Create";
+}
+<main class="app-content">
+
+<h1>Create</h1>
+
+<h4>Stakeholder</h4>
+<hr />
+
+    <div>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group col-4">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group col-4 my-3">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group row my-3">
+               <div class="col-4">
+                    <label asp-for="Company" class="control-label"></label>
+                    <input asp-for="Company" class="form-control" />
+                    <span asp-validation-for="Company" class="text-danger"></span>
+               </div>
+                
+               <div class="col-4">
+                    <label asp-for="Code" class="control-label"></label>
+                    <input asp-for="Code" class="form-control" />
+                    <span asp-validation-for="Code" class="text-danger"></span> 
+                </div>
+                <div class="col-4">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group mt-5">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a class="btn btn-primary ms-3" href="Create" role="button">Limpiar</a>
+            </div>
+        </form>
+    </div>
+
+
+<div class="mt-5">
+    <a asp-action="Index">Back to List</a>
+</div>
+</main>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,36 @@
+/* Sidebar Div */
+div{
+    color: #fff;
+    width: 250px;
+    padding-left: 20px;
+    height: 100vh;
+    background-image: linear-gradient(30deg, #1411cf, #11106b);
+    border-top-right-radius: 90px;
+}
+
+/* Div Header */
+div h2{
+    padding: 40px 0 0 0;
+    cursor: pointer;
+}
+
+/* Div links */
+div a{
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    padding: 12px;
+    padding-left: 30px;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Div link on hover */
+div a:hover{
+    color: #388eff;
+    background: #fff;
+    position: relative;
+    background-color: #fff;
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+}
