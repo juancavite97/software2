@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SoftwareII</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SoftwareII.styles.css" asp-append-version="true" />
+</head>
+<body>
+   <aside class="app-sidebar">
+      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar">
+        <div>
+          <p class="app-sidebar__user-designation">Software II</p>
+        </div>
+      </div>
+      <ul class="app-menu">
+        <li><a class="nav-link text-light" asp-area="" asp-controller="Empleado" asp-action="Index">Empleados</a></li>
+        <li><a class="nav-link text-light" asp-area="" asp-controller="Proyecto" asp-action="Index">Proyecto</a></li>
+        <li><a class="nav-link text-light" asp-area="" asp-controller="Stakeholder" asp-action="Index">Stakeholder</a></li>    
+        <partial name="_LoginPartial" />    
+      </ul>
+    </aside>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - SoftwareII - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/main.js" asp-append-version="true"></script>
+    <script src="~/js/plugins/pace.min.js" asp-append-version="true"></script>
+    <script src="~/js/js/plugins/chart.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

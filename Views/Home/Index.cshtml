@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <!-- Sidebar menu-->
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar">
+        <div>
+          <p class="app-sidebar__user-designation">Software II</p>
+        </div>
+      </div>
+      <ul class="app-menu">
+        <li><a class="nav-link text-light" asp-area="" asp-controller="Empleado" asp-action="Index">Empleados</a></li>
+        <li><a class="nav-link text-light" asp-area="" asp-controller="Proyecto" asp-action="Index">Proyecto</a></li>
+        <li><a class="nav-link text-light" asp-area="" asp-controller="Stakeholder" asp-action="Index">Stakeholder</a></li>    
+        <partial name="_LoginPartial" />    
+      </ul>
+    </aside>
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-dashboard"></i> Dashboard</h1>        
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
+            <div class="info">
+              <h4>Empleados</h4>
+              <p><b>5</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small info coloured-icon"><i class="icon fa fa-thumbs-o-up fa-3x"></i>
+            <div class="info">
+              <h4>Total de Proyectos</h4>
+              <p><b>25</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small warning coloured-icon"><i class="icon fa fa-files-o fa-3x"></i>
+            <div class="info">
+              <h4>Proyectos Cerrados</h4>
+              <p><b>10</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="widget-small danger coloured-icon"><i class="icon fa fa-star fa-3x"></i>
+            <div class="info">
+              <h4>Proyectos en Curso</h4>
+              <p><b>5</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">       
+      </div>
+    </main>
+</div>
